@@ -1,0 +1,123 @@
+.dashboard {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+}
+
+.artist-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.artist-name {
+  font-weight: 500;
+}
+
+.dashboard-nav {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  display: flex;
+  gap: 4px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.dashboard-nav button {
+  background: none;
+  border: none;
+  padding: 16px 20px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.dashboard-nav button:hover {
+  color: var(--text-h);
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.dashboard-nav button.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 20px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-nav {
+    padding: 0 20px;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dashboard-nav {
+    background: var(--bg);
+  }
+
+  .dashboard-nav button:hover {
+    background: rgba(102, 126, 234, 0.1);
+  }
+}

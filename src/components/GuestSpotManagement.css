@@ -1,0 +1,198 @@
+.guest-spot-management {
+  width: 100%;
+}
+
+.guest-spot-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-box {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.guest-spot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.guest-spot-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: box-shadow 0.2s;
+}
+
+.guest-spot-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.spot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.spot-main-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.spot-location {
+  font-size: 15px;
+  color: var(--text);
+}
+
+.spot-status {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.spot-status.confirmed {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.spot-status.pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.spot-status.completed {
+  background: rgba(107, 114, 128, 0.1);
+  color: #6b7280;
+}
+
+.spot-dates {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.date-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date-label {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.date-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.spot-notes {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.spot-notes strong {
+  color: var(--text-h);
+}
+
+.spot-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background: white;
+  color: #667eea;
+  border: 1px solid #667eea;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #667eea;
+  color: white;
+}
+
+.btn-primary-small {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-primary-small:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .guest-spot-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .spot-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .spot-dates {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .spot-actions {
+    flex-direction: column;
+  }
+
+  .spot-actions button {
+    width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .stat-box,
+  .guest-spot-card {
+    background: var(--code-bg);
+  }
+}

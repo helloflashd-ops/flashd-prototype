@@ -1,0 +1,174 @@
+.earnings-overview {
+  width: 100%;
+}
+
+.earnings-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.earning-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.earning-card.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+}
+
+.earning-label {
+  font-size: 14px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.earning-card.primary .earning-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.earning-card:not(.primary) .earning-label {
+  color: var(--text);
+}
+
+.earning-value {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.earning-card.primary .earning-value {
+  color: white;
+}
+
+.earning-card:not(.primary) .earning-value {
+  color: var(--text-h);
+}
+
+.earning-change {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.earning-change.negative {
+  color: rgba(239, 68, 68, 0.9);
+}
+
+.transactions-section {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.transactions-section h3 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.transaction-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: box-shadow 0.2s;
+}
+
+.transaction-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.transaction-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.transaction-info {
+  flex: 1;
+}
+
+.transaction-client {
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 4px;
+}
+
+.transaction-design {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.transaction-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.transaction-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.transaction-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.transaction-status.completed {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.transaction-status.pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.transaction-date {
+  font-size: 13px;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .earnings-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction-main {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .transaction-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .earning-card:not(.primary),
+  .transactions-section {
+    background: var(--code-bg);
+  }
+
+  .transaction-item {
+    background: var(--bg);
+  }
+}
