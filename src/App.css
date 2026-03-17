@@ -4,7 +4,7 @@
 }
 
 .dashboard-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #2D2833;
   color: white;
   padding: 24px 32px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -74,12 +74,12 @@
 
 .dashboard-nav button:hover {
   color: var(--text-h);
-  background: rgba(102, 126, 234, 0.05);
+  background: rgba(0, 255, 194, 0.05);
 }
 
 .dashboard-nav button.active {
-  color: #667eea;
-  border-bottom-color: #667eea;
+  color: #00FFC2;
+  border-bottom-color: #00FFC2;
 }
 
 .dashboard-content {
@@ -118,6 +118,6 @@
   }
 
   .dashboard-nav button:hover {
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(0, 255, 194, 0.1);
   }
 }

@@ -20,7 +20,7 @@
 .stat-number {
   font-size: 42px;
   font-weight: 700;
-  color: #667eea;
+  color: #00FFC2;
   margin-bottom: 8px;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .day-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #2D2833;
   color: white;
   padding: 12px;
   text-align: center;
@@ -115,9 +115,9 @@
 }
 
 .slot-edit:hover {
-  background: #667eea;
+  background: #00FFC2;
   color: white;
-  border-color: #667eea;
+  border-color: #00FFC2;
 }
 
 .no-slots {

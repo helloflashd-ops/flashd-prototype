@@ -133,8 +133,8 @@
 
 .btn-secondary {
   background: white;
-  color: #667eea;
-  border: 1px solid #667eea;
+  color: #00FFC2;
+  border: 1px solid #00FFC2;
   padding: 8px 16px;
   border-radius: 6px;
   font-family: var(--sans);
@@ -145,12 +145,12 @@
 }
 
 .btn-secondary:hover {
-  background: #667eea;
+  background: #00FFC2;
   color: white;
 }
 
 .btn-primary-small {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #2D2833;
   color: white;
   border: none;
   padding: 8px 16px;
